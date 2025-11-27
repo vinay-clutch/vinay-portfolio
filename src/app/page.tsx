@@ -1,9 +1,15 @@
 "use client";
-
+/* eslint-disable react/no-unescaped-entities */
 import SocialMedia from "@/components/SocialMedia";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { AnimateIn } from "@/components/animations/AnimateIn";
-import { ExternalLink, ChevronDown, ChevronUp, Github, Linkedin } from "lucide-react";
+import {
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  Github,
+  Linkedin,
+} from "lucide-react";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 
@@ -11,7 +17,8 @@ export default function Home() {
   const [isProjectsExpanded, setIsProjectsExpanded] = useState(false);
   const initialProjectCount = 2;
   const visibleProjects = useMemo(
-    () => (isProjectsExpanded ? projects : projects.slice(0, initialProjectCount)),
+    () =>
+      isProjectsExpanded ? projects : projects.slice(0, initialProjectCount),
     [isProjectsExpanded]
   );
   const sectionSpacing = "py-6 sm:py-8";
@@ -56,7 +63,11 @@ export default function Home() {
               </AnimateIn>
               <AnimateIn variant="fadeUp" delay={0.1}>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-lg leading-relaxed">
-                  Full Stack Developer skilled in MERN stack and AI-driven applications, with hands-on experience in Python development and full-stack web projects. Passionate about building scalable, user-focused solutions and leveraging AI, analytics, and modern frameworks to deliver impactful results.
+                  Full Stack Developer skilled in MERN stack and AI-driven
+                  applications, with hands-on experience in Python development
+                  and full-stack web projects. Passionate about building
+                  scalable, user-focused solutions and leveraging AI, analytics,
+                  and modern frameworks to deliver impactful results.
                 </p>
               </AnimateIn>
 
@@ -165,7 +176,11 @@ export default function Home() {
           <div className="space-y-8">
             <ul className="space-y-8">
               {education.map((edu, index) => (
-                <AnimateIn key={index} variant="fadeLeft" delay={0.2 + index * 0.05}>
+                <AnimateIn
+                  key={index}
+                  variant="fadeLeft"
+                  delay={0.2 + index * 0.05}
+                >
                   <li className="group hover:translate-x-1 transition-all duration-300 ease-out">
                     <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
                       <h3 className="text-md font-medium">{edu.institution}</h3>
@@ -194,14 +209,20 @@ export default function Home() {
               Skills & Tools
             </h2>
           </div>
-          
+
           <div className="space-y-8">
             {Object.entries(skills).map(([category, items], categoryIndex) => (
               <div key={categoryIndex}>
-                <h3 className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">{category}</h3>
+                <h3 className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-4">
+                  {category}
+                </h3>
                 <div className="grid grid-cols-4 sm:grid-cols-6 gap-y-8 gap-x-6">
                   {items.map(({ logo, title }, index) => (
-                    <AnimateIn key={index} variant="scale" delay={0.25 + index * 0.02}>
+                    <AnimateIn
+                      key={index}
+                      variant="scale"
+                      delay={0.25 + index * 0.02}
+                    >
                       <div className="flex flex-col items-center group">
                         <div className="relative h-10 w-10 sm:h-12 sm:w-12 mb-3 rounded-full border border-zinc-200/70 dark:border-white/10 bg-white/80 dark:bg-white/5 p-1.5 transition-all duration-300 ease-out group-hover:scale-105 group-hover:-translate-y-1">
                           <Image
@@ -235,7 +256,11 @@ export default function Home() {
           <div className="space-y-4">
             <ul className="space-y-4">
               {certifications.map((cert, index) => (
-                <AnimateIn key={index} variant="fadeLeft" delay={0.3 + index * 0.05}>
+                <AnimateIn
+                  key={index}
+                  variant="fadeLeft"
+                  delay={0.3 + index * 0.05}
+                >
                   <li className="group hover:translate-x-1 transition-all duration-300 ease-out">
                     <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
                       <h3 className="text-md font-medium">{cert.title}</h3>
@@ -304,12 +329,15 @@ export default function Home() {
         <section className={`${sectionSpacing} text-center`}>
           <div className="relative z-20 mt-12 mb-6 text-left">
             <h2 className="text-left text-2xl md:text-3xl font-semibold text-white/90 mb-4">
-            My Mindset
+              My Mindset
             </h2>
           </div>
           <AnimateIn variant="fadeUp" delay={0.35}>
             <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl mx-auto text-center">
-              "Every day is an opportunity to improve. I believe in learning by building — turning small ideas into real projects. I follow a simple rule: stay consistent, stay curious. The more I create, the more I grow."
+              "Every day is an opportunity to improve. I believe in learning by
+              building — turning small ideas into real projects. I follow a
+              simple rule: stay consistent, stay curious. The more I create, the
+              more I grow."
             </p>
           </AnimateIn>
         </section>
@@ -319,10 +347,10 @@ export default function Home() {
         <section className={`${sectionSpacing} text-center`}>
           <h2 className="text-lg font-medium tracking-tight mb-4 inline-block">
             Hey, you scrolled this far — let&apos;s build something together.
-
           </h2>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">
-            I&apos;m open to collaborations, freelance work, or just a chat about tech.
+            I&apos;m open to collaborations, freelance work, or just a chat
+            about tech.
           </p>
           <a
             href="mailto:vinayvinay0256@gmail.com"
@@ -423,7 +451,6 @@ const education = [
     institution: "Anikethana PU College, Mandya",
     degree: "Pre-University (PUC)",
     period: "2020 – 2022",
-  
   },
   {
     institution: "Anikethana High School, Mandya",
@@ -434,13 +461,15 @@ const education = [
     institution: "FOSS Club (PESCE)",
     degree: "Graphic Designer & Event Collaborator",
     period: "",
-    description: "Led design for posters, banners, and event creatives, helping boost engagement for workshops and tech events through creative outreach.",
+    description:
+      "Led design for posters, banners, and event creatives, helping boost engagement for workshops and tech events through creative outreach.",
   },
 ];
 
 const certifications = [
   {
-    title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+    title:
+      "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
     issuer: "Oracle",
     year: "",
     description: "",
@@ -455,36 +484,94 @@ const certifications = [
     title: "FOSS Club – Graphic Designer & Event Collaborator",
     issuer: "",
     year: "",
-    description: "Designed promotional materials and collaborated on event organization, contributing to higher participation and visibility for tech events.",
+    description:
+      "Designed promotional materials and collaborated on event organization, contributing to higher participation and visibility for tech events.",
   },
 ];
 
 const skills = {
-  "Programming": [
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", title: "Python" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", title: "JavaScript" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg", title: "SQL" }, // Using generic SQL or Azure SQL as placeholder if generic not found
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", title: "HTML" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", title: "CSS" },
+  Programming: [
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      title: "Python",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      title: "JavaScript",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+      title: "SQL",
+    }, // Using generic SQL or Azure SQL as placeholder if generic not found
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      title: "HTML",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      title: "CSS",
+    },
   ],
   "Frameworks & Libraries": [
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", title: "React.js" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", title: "Node.js" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", title: "Express.js" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", title: "MongoDB" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", title: "Next.js" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", title: "Tailwind CSS" },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      title: "React.js",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      title: "Node.js",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      title: "Express.js",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      title: "MongoDB",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      title: "Next.js",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+      title: "Tailwind CSS",
+    },
   ],
-  "Tools": [
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg", title: "Postman" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", title: "Git" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", title: "GitHub" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", title: "VS Code" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", title: "Figma" },
+  Tools: [
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+      title: "Postman",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      title: "Git",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      title: "GitHub",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+      title: "VS Code",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      title: "Figma",
+    },
   ],
   "Data & AI": [
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", title: "Pandas" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", title: "NumPy" },
-    { logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg", title: "Matplotlib" },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+      title: "Pandas",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
+      title: "NumPy",
+    },
+    {
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg",
+      title: "Matplotlib",
+    },
   ],
 };
