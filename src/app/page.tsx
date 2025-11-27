@@ -318,10 +318,11 @@ export default function Home() {
       <AnimateIn variant="fadeUp" delay={0.3}>
         <section className={`${sectionSpacing} text-center`}>
           <h2 className="text-lg font-medium tracking-tight mb-4 inline-block">
-            Hey, you scrolled this far – let&apos;s build something together.
+            Hey, you scrolled this far — let&apos;s build something together.
+
           </h2>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6">
-            I&apos;m to collaborations, freelance work, or just a chat about tech.
+            I&apos;m open to collaborations, freelance work, or just a chat about tech.
           </p>
           <a
             href="mailto:vinayvinay0256@gmail.com"
