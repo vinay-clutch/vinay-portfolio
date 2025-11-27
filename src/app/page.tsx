@@ -1,5 +1,7 @@
 "use client";
+
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/no-danger */
 import SocialMedia from "@/components/SocialMedia";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { AnimateIn } from "@/components/animations/AnimateIn";
