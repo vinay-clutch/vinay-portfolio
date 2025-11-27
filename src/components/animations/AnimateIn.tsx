@@ -1,7 +1,9 @@
 "use client";
 
 import { cn } from "@/utilities/cn";
-import { motion, useInView, Variants } from "framer-motion";
+import { useInView, Variants } from "framer-motion";
+import { motion, type Transition } from "framer-motion";
+
 import { useMemo, useRef } from "react";
 
 type AnimationVariant =
@@ -20,9 +22,9 @@ type AnimateInProps = {
   once?: boolean;
 };
 
-const baseTransition = {
+const baseTransition: Transition = {
   duration: 0.7,
-  ease: [0.16, 1, 0.3, 1],
+  ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
 };
 
 const variantMap: Record<AnimationVariant, Variants> = {
@@ -66,7 +68,10 @@ export function AnimateIn({
     margin: "-5% 0px -5% 0px",
   });
 
-  const variants = useMemo(() => variantMap[variant] ?? variantMap.fadeUp, [variant]);
+  const variants = useMemo(
+    () => variantMap[variant] ?? variantMap.fadeUp,
+    [variant]
+  );
 
   return (
     <motion.div
