@@ -4,6 +4,7 @@
 /* eslint-disable react/no-danger */
 import SocialMedia from "@/components/SocialMedia";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { ResumeButton } from "@/components/ResumeButton";
 import { AnimateIn } from "@/components/animations/AnimateIn";
 import {
   ExternalLink,
@@ -11,6 +12,7 @@ import {
   ChevronUp,
   Github,
   Linkedin,
+  Briefcase,
 } from "lucide-react";
 import { useMemo, useState } from "react";
 import Image from "next/image";
@@ -71,6 +73,12 @@ export default function Home() {
                   scalable, user-focused solutions and leveraging AI, analytics,
                   and modern frameworks to deliver impactful results.
                 </p>
+              </AnimateIn>
+
+              <AnimateIn variant="fadeUp" delay={0.12}>
+                <div className="mt-6 mb-2">
+                  <ResumeButton variant="full" showSubtitle={true} />
+                </div>
               </AnimateIn>
 
               <AnimateIn variant="fadeUp" delay={0.15}>
@@ -164,6 +172,82 @@ export default function Home() {
                 )}
               </button>
             )}
+          </div>
+        </section>
+      </AnimateIn>
+
+      <AnimateIn variant="fadeUp" delay={0.1}>
+        <section className={sectionSpacing}>
+          <div className="relative z-20 mt-12 mb-6 flex items-center gap-3">
+            <h2 className="text-left text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-white/90">
+              Experience
+            </h2>
+            <Briefcase className="w-6 h-6 text-zinc-500 dark:text-zinc-400" />
+          </div>
+          <div className="space-y-8">
+            <AnimateIn variant="fadeLeft" delay={0.2}>
+              <div className="group relative rounded-2xl border border-zinc-200/70 dark:border-white/5 bg-zinc-50/50 dark:bg-zinc-900/40 p-5 sm:p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl hover:bg-white dark:hover:bg-zinc-800/50">
+                <div className="absolute left-5 right-5 top-0 h-px bg-gradient-to-r from-blue-400/0 via-blue-400/60 to-purple-400/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="flex flex-col sm:flex-row gap-4 mb-4">
+                  <div className="relative w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-white p-2 border border-zinc-100 dark:border-zinc-700">
+                    <Image
+                      src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg"
+                      alt="TCS iON Logo"
+                      fill
+                      className="object-contain p-1"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                      <div>
+                        <h3 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
+                          Software Development Intern
+                        </h3>
+                        <p className="text-zinc-600 dark:text-zinc-400 font-medium">
+                          TCS iON – Industry Training Program
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 animate-pulse">
+                          Ongoing
+                        </span>
+                        <span className="text-xs text-zinc-500 dark:text-zinc-500 whitespace-nowrap">
+                          Dec 2025 – Present
+                        </span>
+                      </div>
+                    </div>
+                    <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-1">
+                      Remote | Karnataka
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4 leading-relaxed">
+                  Currently participating in an industry-aligned training program by
+                  TCS iON, focusing on software development fundamentals, data
+                  structures, algorithms, and real-world application development.
+                  Gaining hands-on experience in modern development practices and
+                  industry-standard workflows.
+                </p>
+
+                <ul className="grid sm:grid-cols-2 gap-2">
+                  {[
+                    "Software Development",
+                    "Data Structures & Algorithms",
+                    "Industry Best Practices",
+                    "Team Collaboration",
+                  ].map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400"
+                    >
+                      <div className="w-1.5 h-1.5 rounded-full bg-zinc-400 dark:bg-zinc-600" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimateIn>
           </div>
         </section>
       </AnimateIn>
