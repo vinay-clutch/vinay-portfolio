@@ -3,4 +3,4 @@ Allow: /
 Disallow: /cgi-bin/
 Disallow: /pref/
 Disallow: /pref/*
-Sitemap: https://yathish-space.vercel.app/sitemap.xml
+Sitemap: https://vinay-portfolio-seven.vercel.app/sitemap.xml

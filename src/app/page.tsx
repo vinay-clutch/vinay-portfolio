@@ -86,7 +86,7 @@ export default function Home() {
       <AnimateIn variant="fadeUp" delay={0.05}>
         <section className={sectionSpacing}>
           <div className="relative z-20 mt-12 mb-6">
-            <h2 className="text-left text-2xl md:text-3xl font-semibold text-white/90 mb-4">
+            <h2 className="text-left text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-white/90 mb-4">
               Projects
             </h2>
           </div>
@@ -171,7 +171,7 @@ export default function Home() {
       <AnimateIn variant="fadeUp" delay={0.1}>
         <section className={sectionSpacing}>
           <div className="relative z-20 mt-12 mb-6">
-            <h2 className="text-left text-2xl md:text-3xl font-semibold text-white/90 mb-4">
+            <h2 className="text-left text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-white/90 mb-4">
               Education & Campus Involvement
             </h2>
           </div>
@@ -207,7 +207,7 @@ export default function Home() {
       <AnimateIn variant="fadeUp" delay={0.15}>
         <section className={sectionSpacing}>
           <div className="relative z-20 mt-12 mb-6">
-            <h2 className="text-left text-2xl md:text-3xl font-semibold text-white/90 mb-4">
+            <h2 className="text-left text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-white/90 mb-4">
               Skills & Tools
             </h2>
           </div>
@@ -251,7 +251,7 @@ export default function Home() {
       <AnimateIn variant="fadeUp" delay={0.2}>
         <section className={sectionSpacing}>
           <div className="relative z-20 mt-12 mb-6">
-            <h2 className="text-left text-2xl md:text-3xl font-semibold text-white/90 mb-4">
+            <h2 className="text-left text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-white/90 mb-4">
               Certifications & Achievements
             </h2>
           </div>
@@ -289,7 +289,7 @@ export default function Home() {
       <AnimateIn variant="fadeUp" delay={0.22}>
         <section className={sectionSpacing}>
           <div className="relative z-20 mt-12 mb-6">
-            <h2 className="text-left text-2xl md:text-3xl font-semibold text-white/90 mb-4">
+            <h2 className="text-left text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-white/90 mb-4">
               GitHub Contributions
             </h2>
           </div>
@@ -330,7 +330,7 @@ export default function Home() {
       <AnimateIn variant="fadeUp" delay={0.25}>
         <section className={`${sectionSpacing} text-center`}>
           <div className="relative z-20 mt-12 mb-6 text-left">
-            <h2 className="text-left text-2xl md:text-3xl font-semibold text-white/90 mb-4">
+            <h2 className="text-left text-2xl md:text-3xl font-semibold text-zinc-900 dark:text-white/90 mb-4">
               My Mindset
             </h2>
           </div>
@@ -401,12 +401,20 @@ export default function Home() {
 
 const projects = [
   {
-    title: "Vibe-Chat",
+    title: "LaunchBlueprint",
     description:
-      "Secure real-time chat application with JWT-based authentication and a responsive React frontend for seamless user messaging.",
+      "A structured, distraction-free learning system that provides a clear, semester-long roadmap with curated resources, focused milestones, and production-oriented projects to help students build real-world skills and become industry-ready efficiently.",
     link: "#",
-    github: "https://github.com/vinay-clutch/Vibe-Chat",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    github: "https://github.com/vinay-clutch/OneSemester",
+    technologies: ["JavaScript", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "Elevate Career",
+    description:
+      "An AI-powered career assistant designed to streamline the job application process with intelligent resume generation, personalized cover letters, and mock interview preparation. Built to help users optimize their profiles and improve job readiness with automation and smart insights.",
+    link: "#",
+    github: "https://github.com/vinay-clutch/Elevate-Career",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Inngest", "Clerk"],
   },
   {
     title: "AI-Powered Resume Analyzer",
@@ -415,14 +423,6 @@ const projects = [
     link: "#",
     github: "https://github.com/vinay-clutch/ai-resume--analyzer",
     technologies: ["React", "React Router v7", "Tailwind CSS v4", "Zustand"],
-  },
-  {
-    title: "AI-Powered Code Reviewer",
-    description:
-      "MERN-based platform that integrates AI to review code, highlight potential issues, and suggest improvements with interactive dashboards.",
-    link: "#",
-    github: "https://github.com/vinay-clutch/code-review",
-    technologies: ["React", "Node.js", "MongoDB", "OpenAI"],
   },
   {
     title: "Orbit – AI Assistant CLI",
@@ -440,6 +440,22 @@ const projects = [
       "Zod",
       "Chalk/Boxen",
     ],
+  },
+  {
+    title: "Vibe-Chat",
+    description:
+      "Secure real-time chat application with JWT-based authentication and a responsive React frontend for seamless user messaging.",
+    link: "#",
+    github: "https://github.com/vinay-clutch/Vibe-Chat",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+  },
+  {
+    title: "AI-Powered Code Reviewer",
+    description:
+      "MERN-based platform that integrates AI to review code, highlight potential issues, and suggest improvements with interactive dashboards.",
+    link: "#",
+    github: "https://github.com/vinay-clutch/code-review",
+    technologies: ["React", "Node.js", "MongoDB", "OpenAI"],
   },
 ];
 
