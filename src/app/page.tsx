@@ -488,7 +488,7 @@ const projects = [
     title: "LaunchBlueprint",
     description:
       "A structured, distraction-free learning system that provides a clear, semester-long roadmap with curated resources, focused milestones, and production-oriented projects to help students build real-world skills and become industry-ready efficiently.",
-    link: "#",
+    link: "https://one-semester-path.vercel.app/",
     github: "https://github.com/vinay-clutch/OneSemester",
     technologies: ["JavaScript", "TypeScript", "Tailwind CSS"],
   },
@@ -496,7 +496,7 @@ const projects = [
     title: "Elevate Career",
     description:
       "An AI-powered career assistant designed to streamline the job application process with intelligent resume generation, personalized cover letters, and mock interview preparation. Built to help users optimize their profiles and improve job readiness with automation and smart insights.",
-    link: "#",
+    link: "https://github.com/vinay-clutch/Elevate-Career",
     github: "https://github.com/vinay-clutch/Elevate-Career",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Inngest", "Clerk"],
   },
@@ -504,7 +504,7 @@ const projects = [
     title: "AI-Powered Resume Analyzer",
     description:
       "AI-driven resume analyzer with ATS-style scoring, real-time PDF processing, and detailed feedback for improving job applications.",
-    link: "#",
+    link: "https://ai-resume-analyzer-alpha-beige.vercel.app/auth?next=/",
     github: "https://github.com/vinay-clutch/ai-resume--analyzer",
     technologies: ["React", "React Router v7", "Tailwind CSS v4", "Zustand"],
   },
