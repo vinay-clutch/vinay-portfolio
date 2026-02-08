@@ -485,7 +485,7 @@ export default function Home() {
 
 const projects = [
   {
-    title: "OneSemesterchBlueprint",
+    title: "OneSemester",
     description:
       "A structured, distraction-free learning system that provides a clear, semester-long roadmap with curated resources, focused milestones, and production-oriented projects to help students build real-world skills and become industry-ready efficiently.",
     link: "https://one-semester-path.vercel.app/",
