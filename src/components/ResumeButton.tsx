@@ -21,7 +21,7 @@ export const ResumeButton: React.FC<ResumeButtonProps> = ({
   if (variant === "icon") {
     return (
       <a
-        href="/resume.pdf"
+        href="/Vinay_BS_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Download Resume"
@@ -42,7 +42,7 @@ export const ResumeButton: React.FC<ResumeButtonProps> = ({
   return (
     <div className="flex flex-col items-start gap-1">
       <a
-        href="/resume.pdf"
+        href="/Vinay_BS_Resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
@@ -57,7 +57,7 @@ export const ResumeButton: React.FC<ResumeButtonProps> = ({
       </a>
       {showSubtitle && (
         <span className="text-[10px] text-zinc-400 font-medium ml-4">
-          PDF • 150KB
+          PDF • 332KB
         </span>
       )}
     </div>
